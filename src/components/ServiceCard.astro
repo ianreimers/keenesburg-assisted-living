@@ -1,0 +1,14 @@
+---
+const { data } = Astro.props;
+const { service, img, imgAlt, careList } = data;
+---
+
+<div class="card" style="width: 18rem;">
+  <img src={img.src} class="card-img-top" alt={imgAlt} />
+  <div class="card-body">
+    <h5 class="fw-bold card-title">{service}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    {careList.map((item) => <li class="list-group-item">{item}</li>)}
+  </ul>
+</div>

@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ImageCard from "../components/ImageCard.astro";
+import ImageKodi from "../assets/images/kodi.webp";
+import ImageLisa from "../assets/images/lisa.webp";
+
+const imgCardData = {
+  kodi: {
+    img: ImageKodi,
+    name: "Kodi Hill",
+    desc: "Kodi Hill is the onsite Administrator.  She is the daughter of the previous owner Mark and Nancy Gray.  She lives in Wiggins, CO with her family.",
+  },
+  lisa: {
+    img: ImageLisa,
+    name: "Lisa",
+    desc: "A registered nurse and owner serves as the Lead Administrator.  Lisa's 15 years of nursing experience with geriatric populations gives her a unique perspective in the quality of care of the residents.  Lisa's previous experience includes skilled nursing and hospice care in Northern Colorado.  She is a resident of Erie where she has operated The Charleston at Erie for the past six years.",
+  },
+};
+---
+
+<Layout title="About">
+  <div class="container">
+    <h2 class="text-center py-5">About Us</h2>
+    <p class="w-50 mx-auto">
+      At Colorado Assisted Living Communities, we take care of you like you were
+      our parents. Our 14 bed home is located in the small town of Keenseburg,
+      Colorado. Keenesburg is located off of I-76 in Weld County and is just 20
+      minutes from Brighton and only 30 minutes from DIA. We are also close to
+      most of northern Colorado and Fort Morgan. We have quality trained staff
+      who are friendly and care for your loved one 24 hours per day. We
+      understand the importance of finding the right assisted living facility
+      for your loved one. That's why we strive to provide a comfortable and safe
+      environment for our residents. Our team is dedicated to providing
+      personalized care and attention to each individual, ensuring that their
+      needs are met with compassion and respect.We believe that every resident
+      deserves to live with dignity and independence, and we work hard to make
+      that a reality. If you're looking for a caring and trustworthy assisted
+      living community, look no further than Colorado Assisted Living
+      Communities. Contact us now to see about a tour or to inquire about
+      availability for your loved one.
+    </p>
+    <h2 class="text-center py-5">Our Team</h2>
+    <p class="w-50 mx-auto">
+      Our team is dedicated to providing compassionate care to our residents. We
+      have a team of trained and certified caregivers who are available 24/7 to
+      assist with any needs or concerns. We pride ourselves on creating a warm
+      and welcoming environment for all of our residents.
+    </p>
+    <div class="py-4 d-flex justify-content-around">
+      <ImageCard
+        img={imgCardData.lisa.img}
+        name={imgCardData.lisa.name}
+        desc={imgCardData.lisa.desc}
+      />
+      <ImageCard
+        img={imgCardData.kodi.img}
+        name={imgCardData.kodi.name}
+        desc={imgCardData.kodi.desc}
+      />
+    </div>
+  </div>
+</Layout>
