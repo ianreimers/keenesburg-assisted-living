@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import ImageKodi from "../assets/images/kodi.webp";
+import ParagraphWidth from "../components/ParagraphWidth.astro";
 
 const servicesData = [
   {
@@ -48,16 +49,20 @@ const servicesData = [
 <Layout title="Services">
   <div class="container">
     <h2 class="py-5 text-center">Services</h2>
-    <p class="w-50 mx-auto">
-      At Colorado Assisted Living Communities, we believe in an active and
-      fulfilling lifestyle for our residents. Our community is alive and
-      vibrant, offering a range of activities that cater to all interests.
-      Whether it's gardening, playing games or arts and crafts we have something
-      for everyone. Our residents lead enriched lives, and we are proud to be a
-      part of their journey. Contact us to learn more about our activities and
-      lifestyle.
-    </p>
-    <div class="py-5 d-flex justify-content-around align-items-start">
+    <ParagraphWidth>
+      <p class="fs-md-5 mx-auto">
+        At Colorado Assisted Living Communities, we believe in an active and
+        fulfilling lifestyle for our residents. Our community is alive and
+        vibrant, offering a range of activities that cater to all interests.
+        Whether it's gardening, playing games or arts and crafts we have
+        something for everyone. Our residents lead enriched lives, and we are
+        proud to be a part of their journey. Contact us to learn more about our
+        activities and lifestyle.
+      </p>
+    </ParagraphWidth>
+    <div
+      class="py-5 d-flex flex-wrap justify-content-center align-items-start gap-5"
+    >
       {servicesData.map((data) => <ServiceCard data={data} />)}
     </div>
   </div>

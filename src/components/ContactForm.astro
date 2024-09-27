@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <form class="">
   <div class="form-floating mb-3">
     <input
@@ -6,7 +10,11 @@
       id="floatingName"
       placeholder="Name"
     />
-    <label for="floatingName">Name</label>
+    <label
+      for="floatingName"
+      class="d-flex justify-content-center align-items-center"
+      ><Icon name="tabler:user" class="me-1" />Name</label
+    >
   </div>
   <div class="form-floating mb-3">
     <input
@@ -15,7 +23,11 @@
       id="floatingInput"
       placeholder="name@example.com"
     />
-    <label for="floatingInput">Email Address</label>
+    <label
+      for="floatingInput"
+      class="d-flex justify-content-center align-items-center"
+      ><Icon name="tabler:mail" class="me-1" />Email Address</label
+    >
   </div>
   <div class="form-floating mb-3">
     <input
@@ -24,7 +36,11 @@
       id="floatingPhone"
       placeholder="Phone"
     />
-    <label for="floatingPhone">Phone</label>
+    <label
+      for="floatingPhone"
+      class="d-flex justify-content-center align-items-center"
+      ><Icon name="tabler:phone" class="me-1" />Phone</label
+    >
   </div>
   <div class="form-floating">
     <textarea
@@ -32,6 +48,8 @@
       id="floatingMessage"
       placeholder=""
       style="height: 100px"></textarea>
-    <label for="floatingMessage">Message</label>
+    <label for="floatingMessage"
+      ><Icon name="tabler:notes" class="me-1" />Message</label
+    >
   </div>
 </form>

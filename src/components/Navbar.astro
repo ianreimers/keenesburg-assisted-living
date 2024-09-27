@@ -1,10 +1,10 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <a class="navbar-brand" href="/">Keenesburg Assisted Living</a>
+    <a class="navbar-brand" href="/">Charleston At Keenesburg</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -31,10 +31,16 @@
           <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
-      <button class="btn btn-secondary">303-732-4424</button>
+      <a class="btn btn-secondary d-inline-flex" href="tel:+13037324424"
+        ><Icon
+          name="tabler:phone"
+          size={20}
+          class="align-self-center me-1"
+        />303-732-4424</a
+      >
     </div>
   </div>
 </nav>
 <script>
-  import { Collapse } from "bootstrap/js/dist/collapse";
+  import { Collapse } from "bootstrap";
 </script>

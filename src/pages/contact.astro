@@ -1,28 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ContactForm from "../components/ContactForm.astro";
+import Map from "../components/Map.astro";
+import FormAccordion from "../components/FormsAccordion.astro";
 ---
 
 <Layout title="Contact">
   <div class="container">
     <h2 class="py-5 text-center">Contact</h2>
     <div class="row">
-      <div class="col">
-        <ContactForm />
+      <div
+        class="col-12 col-lg-5 mb-5 offset-lg-1 d-flex justify-content-center"
+      >
+        <div class="w-100">
+          <FormAccordion />
+        </div>
       </div>
       <div
-        class="col d-flex flex-column justify-content-center align-items-center"
+        class="col-12 col-lg-6 mb-5 d-flex flex-column justify-content-start align-items-center align-items-lg-start"
       >
-        <iframe
-          width="425"
-          height="350"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-104.5256155729294%2C40.106863774354366%2C-104.51667845249176%2C40.1104824748719&layer=mapnik&marker=40.10867314867772%2C-104.52114701271057"
-          style="border: 1px solid black"></iframe><br /><small
-          ><a
-            href="https://www.openstreetmap.org/?mlat=40.108673&mlon=-104.521147#map=18/40.108673/-104.521147&layers=N"
-            >View Larger Map</a
-          ></small
-        >
+        <p class="fs-4 text-center w-100">195 E. Gandy Ave. Keenseburg, CO</p>
+        <Map />
       </div>
     </div>
   </div>
